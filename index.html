@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <div id = "RPSGame">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
 
-<h1> class = "gameText" id = "playerText" Player:</h1>
-<h1> class = "gameText" id = "computerText" Computer:</h1>
-<h1> class = "gameText" id = "resultText" Result:</h1>
+  <body>
+    <div id="RPSGame">
+      <h1 class="gameText" id="playerText">Player:</h1>
+      <p class="displayPoints" id = "playerPointDisplay"></p>
+      <h1 class="gameText" id="computerText">Computer:</h1>
+      <p class="displayPoints" id = "computerPointDisplay"></p>
 
-<button class = choiceBtn>Rock</button>
-<button class = choiceBtn>Paper</button>
-<button class = choiceBtn>Scissors</button>
-
-</div>
-</body>
+      
+      <button class="choiceBtn" id = "Rock" onclick="playerOption(this)">Rock</button>
+      <button class="choiceBtn" id = "Paper" onclick="playerOption(this)">Paper</button>
+      <button class="choiceBtn" id = "Scissors" onclick="playerOption(this)">Scissors</button>
+    </div>
+  </body>
 </html>

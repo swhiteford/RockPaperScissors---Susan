@@ -1,51 +1,80 @@
-Create array with Rock Paper Scissors inside array 
+// // Create array with Rock Paper Scissors inside array
+// const playerText = document.querySelector("#playerText");
 
-Generate random numbers for both players between 0-2
+// const computerText = document.querySelector("#computerText");
 
-Two players: click on play: in js generate two random numbers one for player 1 and one for player 2
+// const resultText = document.querySelector("#resultText");
 
-If player 1 gets 0 then take array of 0 will return rock.  Array of 2 = Scissors
+// const choiceBtns = document.querySelectorAll(".choiceBtn");
+
+let player;
+let computer;
+let playerPoints = 0;
+let computerPoints = 0;
 
 
+function computerTurn() {
+  const randNum = Math.floor(Math.random() * 3) + 1;
 
-let player1='rock' 
-//  let player2='rock'
-//  if(player1==='rock')
-//  {
-//     if(player2==='rock')
-//       console.log("Its a Tie")
-//     else if(player2==='paper')
-//     {
-//         console.log("Player1 wins")
-//     }
-//     else if(player2==='scissor')
-//     {
-//         console.log("Player1 wins")
-//     }
-//  }
-//  if(player1==='paper')
-//  {
-//     if(player2==='paper')
-//       console.log("Its a Tie")
-//     else if(player2==='rock')
-//     {
-//         console.log("Player2 wins")
-//     }
-//     else if(player2==='scissor')
-//     {
-//         console.log("Player2 wins")
-//     }
-//  }
-//  if(player1==='scissor')
-//  {
-//     if(player2==='scissor')
-//       console.log("Its a Tie")
-//     else if(player2==='rock')
-//     {
-//         console.log("Player2 wins")
-//     }
-//     else if(player2==='paper')
-//     {
-//         console.log("Player1 wins")
-//     }
-//  }
+  switch (randNum) {
+    case 1:
+      computer = "Rock";
+      return computer;
+      break;
+    case 2:
+      computer = "Paper";
+      return computer;
+    case 3:
+      computer = "Scissors";
+      return computer;
+      break;
+  }
+}
+
+
+function playerOption(playerChoice) {
+  //check if round <=10 then the remaining procedure should continue: or else alert "Game Over"
+  console.log("playerChoice:" + playerChoice);
+  computer = computerTurn();
+
+  comparechoiceGame (playerChoice.id, computer)
+  document.querySelector("#playerPointDisplay").textContent = playerPoints
+  document.querySelector("#computerPointDisplay").textContent = computerPoints
+}
+
+
+function comparechoiceGame (playerChoice, computer){
+
+if (playerChoice === "Rock") {
+  if (computer === "Rock") alert("Its a Tie");
+  else if (computer === "Paper") {
+    alert("Computer wins");
+    computerPoints ++;
+  } else if (computer === "Scissors") {
+    alert("Player1 wins");
+    playerPoints++;
+  }
+}
+if (playerChoice === "Paper") {
+  if (computer === "Paper") alert("Its a Tie");
+  else if (computer === "Rock") {
+    alert("Player1 wins");
+    playerPoints++;
+  } else if (computer === "Scissors") {
+    alert("Computer wins")
+    computerPoints ++;
+  }
+}
+if (playerChoice === "Scissors") {
+  if (computer === "Scissors") alert("Its a Tie");
+  else if (computer === "Rock") {
+    alert("Computer wins");
+    computerPoints ++;
+  } else if (computer === "Paper") {
+    alert("Player1 wins");
+    playerPoints++;
+  }
+}
+}
+
+
