@@ -41,4 +41,11 @@ playerChoiceButtons.forEach((button) => {
   });
 });
 
+function removeButtonborder() {
+  playerChoiceButtons.forEach((button) => {
+    button.classList.remove("playerAction");
+    console.log (button)
+  });
+}
+
 
