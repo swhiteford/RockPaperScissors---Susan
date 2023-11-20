@@ -27,4 +27,18 @@ playerChoiceButtons.forEach((button) => {
     if (playerChoice === computerChoice) {
       resultTextElement.textContent = "It's a tie!";
 
+    } else if (
+      (playerChoice === "rock" && computerChoice === "scissors") ||
+      (playerChoice === "paper" && computerChoice === "rock") ||
+      (playerChoice === "scissors" && computerChoice === "paper")
+    ) {
+      playerScore++;
+      resultTextElement.textContent = "You win!";
+    } else {
+      computerScore++;
+      resultTextElement.textContent = "You lost!";
+    }
+  });
+});
+
 
