@@ -1,24 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rock Paper Scissors</h1>
 
-  <body>
-    <div id="RPSGame">
-      <h1 class="gameText" id="playerText">Player:</h1>
-      <p class="displayPoints" id = "playerPointDisplay"></p>
-      <h1 class="gameText" id="computerText">Computer:</h1>
-      <p class="displayPoints" id = "computerPointDisplay"></p>
+        <div class="player-choice">
+            <h2>Your Choice</h2>
+            <button class="choice" id="rock">
+                <img src="./images/rock.jpg" alt="Rock">
+            </button>
+            <button class="choice" id="paper">
+                <img src="./images/paper.jpg" alt="Paper">
+            </button>
+            <button class="choice" id="scissors">
+                <img src="./images/scissors.jpg" alt="Scissors">
+            </button>
+        </div>
 
-      
-      <button class="choiceBtn" id = "Rock" onclick="playerOption(this)">Rock</button>
-      <button class="choiceBtn" id = "Paper" onclick="playerOption(this)">Paper</button>
-      <button class="choiceBtn" id = "Scissors" onclick="playerOption(this)">Scissors</button>
+        <div class="computer-choice">
+            <h2>Computer's Choice</h2>
+            <img src="images/cartoon.PNG" id="computerImage" alt="Computer's Choice">
+        </div>
+
+        <div class="result">
+            <h2>Result</h2>
+            <p id="resultText"></p>
+        </div>
+
+        <button class="restart">Restart</button>
     </div>
-  </body>
+
+    <script src="index.js"></script>
+</body>
 </html>
