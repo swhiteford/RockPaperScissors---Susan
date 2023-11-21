@@ -12,7 +12,7 @@ body {
 .container {
   width: 80%;
   max-width: 600px;
-  /* background-color: #f2f2f2;
+  background-color: #f2f2f2;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -59,4 +59,4 @@ h1 {
 
 .player-choice > button:focus {
 border: 2px solid green;
-} */
+}
